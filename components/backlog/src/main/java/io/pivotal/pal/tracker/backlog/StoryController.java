@@ -6,6 +6,7 @@ import io.pivotal.pal.tracker.backlog.data.StoryRecord;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import static io.pivotal.pal.tracker.backlog.StoryInfo.storyInfoBuilder;
 import static io.pivotal.pal.tracker.backlog.data.StoryFields.storyFieldsBuilder;
 import static java.util.stream.Collectors.toList;
 
+@EnableSwagger2
 @RestController
 @RequestMapping("/stories")
 public class StoryController {
