@@ -3,6 +3,6 @@ applications:
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   host: allocations-pal-ravi
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://allocations-pal-ravi.apps.chicken.pal.pivotal.io
+    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-ravi.apps.evans.pal.pivotal.io
   services:
   - tracker-allocations-database
