@@ -2,8 +2,6 @@ applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
   host: allocations-pal-ravi
-  memory: 1G
-  instances: 1
   env:
     REGISTRATION_SERVER_ENDPOINT: http://allocations-pal-ravi.apps.chicken.pal.pivotal.io
   services:
