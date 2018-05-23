@@ -6,6 +6,7 @@ import io.pivotal.pal.tracker.allocations.data.AllocationRecord;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -15,6 +16,8 @@ import static io.pivotal.pal.tracker.allocations.data.AllocationFields.allocatio
 import static java.util.stream.Collectors.toList;
 
 @RestController
+@EnableSwagger2
+
 @RequestMapping("/allocations")
 public class AllocationController {
 
