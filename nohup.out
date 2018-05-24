@@ -375,3 +375,5 @@ Caused by: java.io.IOException: Bad file descriptor
 2018-05-24 15:19:19.428  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2018-05-24 15:20:19.428  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2018-05-24 15:21:19.428  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 15:22:19.428  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 15:23:19.429  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
