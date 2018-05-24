@@ -1,0 +1,256 @@
+Starting a Gradle Daemon, 1 busy and 1 stopped Daemons could not be reused, use --status for details
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:57)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:40)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:125)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:255)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at org.gradle.util.DisconnectableInputStream$1.run(DisconnectableInputStream.java:96)
+	... 1 more
+:buildSrc:compileJava NO-SOURCE
+:buildSrc:compileGroovy UP-TO-DATE
+:buildSrc:processResources NO-SOURCE
+:buildSrc:classes UP-TO-DATE
+:buildSrc:jar UP-TO-DATE
+:buildSrc:assemble UP-TO-DATE
+:buildSrc:compileTestJava NO-SOURCE
+:buildSrc:compileTestGroovy NO-SOURCE
+:buildSrc:processTestResources NO-SOURCE
+:buildSrc:testClasses UP-TO-DATE
+:buildSrc:test NO-SOURCE
+:buildSrc:check UP-TO-DATE
+:buildSrc:build UP-TO-DATE
+:platform-services:eureka-server:compileJava UP-TO-DATE
+:platform-services:eureka-server:processResources UP-TO-DATE
+:platform-services:eureka-server:classes UP-TO-DATE
+:platform-services:eureka-server:findMainClass
+:platform-services:eureka-server:bootRun
+2018-05-24 13:13:14.325  INFO 31045 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2145b572: startup date [Thu May 24 13:13:14 MDT 2018]; root of context hierarchy
+2018-05-24 13:13:14.610  INFO 31045 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-24 13:13:14.660  INFO 31045 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6b7c5495] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.7.RELEASE)
+
+2018-05-24 13:13:14.963  INFO 31045 --- [           main] io.pivotal.pal.tracker.eurekaserver.App  : No active profile set, falling back to default profiles: default
+2018-05-24 13:13:14.977  INFO 31045 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f132176: startup date [Thu May 24 13:13:14 MDT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2145b572
+2018-05-24 13:13:15.776  INFO 31045 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=79fff7ff-edb0-39a7-aa04-21bff35be6ef
+2018-05-24 13:13:15.795  INFO 31045 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-24 13:13:15.843  INFO 31045 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$818ef7d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-24 13:13:15.853  INFO 31045 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$6b7c5495] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-24 13:13:16.111  INFO 31045 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8761 (http)
+2018-05-24 13:13:16.123  INFO 31045 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-05-24 13:13:16.124  INFO 31045 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2018-05-24 13:13:16.226  INFO 31045 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-05-24 13:13:16.226  INFO 31045 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1249 ms
+2018-05-24 13:13:16.662  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestTraceFilter' to: [/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'servletContainer' to urls: [/eureka/*]
+2018-05-24 13:13:16.663  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018-05-24 13:13:16.664  INFO 31045 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-24 13:13:16.745  INFO 31045 --- [ost-startStop-1] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2018-05-24 13:13:16.804  INFO 31045 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-05-24 13:13:16.805  INFO 31045 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-05-24 13:13:16.901  INFO 31045 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-05-24 13:13:16.901  INFO 31045 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-05-24 13:13:17.411  WARN 31045 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-05-24 13:13:17.412  INFO 31045 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-05-24 13:13:17.417  WARN 31045 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-05-24 13:13:17.418  INFO 31045 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2018-05-24 13:13:17.665  INFO 31045 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f132176: startup date [Thu May 24 13:13:14 MDT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2145b572
+2018-05-24 13:13:17.767  INFO 31045 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-24 13:13:17.768  INFO 31045 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-24 13:13:17.772  INFO 31045 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lastn],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.lastn(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-05-24 13:13:17.772  INFO 31045 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.status(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
+2018-05-24 13:13:17.800  INFO 31045 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24 13:13:17.800  INFO 31045 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24 13:13:17.835  INFO 31045 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-24 13:13:18.396  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2018-05-24 13:13:18.397  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2018-05-24 13:13:18.398  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.399  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2018-05-24 13:13:18.401  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2018-05-24 13:13:18.401  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24 13:13:18.401  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.402  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.403  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2018-05-24 13:13:18.404  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.405  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.406  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.406  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.407  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.408  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.408  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.409  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+2018-05-24 13:13:18.409  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+2018-05-24 13:13:18.409  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2018-05-24 13:13:18.410  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2018-05-24 13:13:18.411  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2018-05-24 13:13:18.411  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.411  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2018-05-24 13:13:18.412  INFO 31045 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2018-05-24 13:13:18.536  INFO 31045 --- [           main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7f132176: startup date [Thu May 24 13:13:14 MDT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2145b572] and template loader path [classpath:/templates/]
+2018-05-24 13:13:18.537  INFO 31045 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2018-05-24 13:13:18.648  INFO 31045 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2018-05-24 13:13:18.671  INFO 31045 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2018-05-24 13:13:18.671  INFO 31045 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2018-05-24 13:13:18.677  INFO 31045 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1527189198677 with initial instances count: 0
+2018-05-24 13:13:18.709  INFO 31045 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2018-05-24 13:13:18.711  INFO 31045 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2018-05-24 13:13:18.869  INFO 31045 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-05-24 13:13:18.870  INFO 31045 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-05-24 13:13:18.870  INFO 31045 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-05-24 13:13:18.870  INFO 31045 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2018-05-24 13:13:18.992  INFO 31045 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2018-05-24 13:13:19.000  INFO 31045 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2018-05-24 13:13:19.000  INFO 31045 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2018-05-24 13:13:19.013  WARN 31045 --- [           main] arterDeprecationWarningAutoConfiguration : spring-cloud-starter-eureka-server is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka-server
+2018-05-24 13:13:19.073  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-05-24 13:13:19.080  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
+2018-05-24 13:13:19.082  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2018-05-24 13:13:19.082  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2018-05-24 13:13:19.083  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+2018-05-24 13:13:19.086  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
+2018-05-24 13:13:19.088  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2018-05-24 13:13:19.097  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+2018-05-24 13:13:19.103  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2018-05-24 13:13:19.111  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=7f132176,type=ConfigurationPropertiesRebinder]
+2018-05-24 13:13:19.117  INFO 31045 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+2018-05-24 13:13:19.344  INFO 31045 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2018-05-24 13:13:19.344  INFO 31045 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application eureka-server with eureka with status UP
+2018-05-24 13:13:19.386  INFO 31045 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2018-05-24 13:13:19.387  INFO 31045 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
+2018-05-24 13:13:19.387  INFO 31045 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
+2018-05-24 13:13:19.405  INFO 31045 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2018-05-24 13:13:19.405  INFO 31045 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2018-05-24 13:13:19.405  INFO 31045 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2018-05-24 13:13:19.405  INFO 31045 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2018-05-24 13:13:19.406  INFO 31045 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2018-05-24 13:13:19.418  INFO 31045 --- [      Thread-11] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2018-05-24 13:13:19.459  INFO 31045 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8761 (http)
+2018-05-24 13:13:19.460  INFO 31045 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2018-05-24 13:13:19.464  INFO 31045 --- [           main] io.pivotal.pal.tracker.eurekaserver.App  : Started App in 5.539 seconds (JVM running for 5.923)
+2018-05-24 13:13:37.450  INFO 31045 --- [nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-24 13:13:37.451  INFO 31045 --- [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-24 13:13:37.491  INFO 31045 --- [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2018-05-24 13:13:37.591  WARN 31045 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: REGISTRATION-SERVER - 10.1.10.151:registration-server:8083
+2018-05-24 13:13:37.591  WARN 31045 --- [nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): REGISTRATION-SERVER - 10.1.10.151:registration-server:8083
+2018-05-24 13:13:37.738  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=false)
+2018-05-24 13:13:38.481  WARN 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: TIMESHEETS-SERVER - 10.1.10.151:timesheets-server:8084
+2018-05-24 13:13:38.481  WARN 31045 --- [nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Renew): TIMESHEETS-SERVER - 10.1.10.151:timesheets-server:8084
+2018-05-24 13:13:38.601  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=true)
+2018-05-24 13:13:38.759  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status UP (replication=false)
+2018-05-24 13:13:39.271  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status UP (replication=true)
+2018-05-24 13:13:42.070  WARN 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: BACKLOG-SERVER - 10.1.10.151:backlog-server:8082
+2018-05-24 13:13:42.072  WARN 31045 --- [io-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Renew): BACKLOG-SERVER - 10.1.10.151:backlog-server:8082
+2018-05-24 13:13:42.272  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status UP (replication=false)
+2018-05-24 13:13:42.760  WARN 31045 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: ALLOCATIONS-SERVER - 10.1.10.151:allocations-server:8081
+2018-05-24 13:13:42.762  WARN 31045 --- [nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): ALLOCATIONS-SERVER - 10.1.10.151:allocations-server:8081
+2018-05-24 13:13:42.786  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status UP (replication=true)
+2018-05-24 13:13:43.035  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=false)
+2018-05-24 13:13:43.550  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=true)
+2018-05-24 13:14:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:14:39.295  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=false)
+2018-05-24 13:14:39.341  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=false)
+2018-05-24 13:14:39.810  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=true)
+2018-05-24 13:14:39.814  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=true)
+2018-05-24 13:15:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:16:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:17:19.408  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:17:51.884  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status DOWN (replication=false)
+2018-05-24 13:17:51.952  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 (replication=false)
+2018-05-24 13:17:52.398  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status DOWN (replication=true)
+2018-05-24 13:17:52.401  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 (replication=true)
+2018-05-24 13:18:13.736  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=false)
+2018-05-24 13:18:14.246  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=true)
+2018-05-24 13:18:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:18:40.641  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=false)
+2018-05-24 13:18:41.150  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=true)
+2018-05-24 13:19:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:20:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:21:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:22:19.408  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:22:45.658  INFO 31045 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=false)
+2018-05-24 13:22:45.679  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=false)
+2018-05-24 13:22:46.171  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=true)
+2018-05-24 13:22:46.172  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=true)
+2018-05-24 13:23:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:24:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:25:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:26:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:27:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:28:19.000  INFO 31045 --- [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2018-05-24 13:28:19.407  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:29:19.408  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:30:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:31:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:32:19.408  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:33:19.408  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:33:31.585  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status DOWN (replication=false)
+2018-05-24 13:33:31.658  INFO 31045 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 (replication=false)
+2018-05-24 13:33:31.838  INFO 31045 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status DOWN (replication=false)
+2018-05-24 13:33:31.861  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 (replication=false)
+2018-05-24 13:33:32.097  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status DOWN (replication=true)
+2018-05-24 13:33:32.097  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 (replication=true)
+2018-05-24 13:33:32.097  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status DOWN (replication=true)
+2018-05-24 13:33:32.097  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 (replication=true)
+2018-05-24 13:33:41.009  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status DOWN (replication=false)
+2018-05-24 13:33:41.046  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 (replication=false)
+2018-05-24 13:33:41.520  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status DOWN (replication=true)
+2018-05-24 13:33:41.521  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 (replication=true)
+2018-05-24 13:34:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:35:09.824  INFO 31045 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 with status UP (replication=false)
+2018-05-24 13:35:10.333  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 with status UP (replication=true)
+2018-05-24 13:35:10.939  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 with status DOWN (replication=false)
+2018-05-24 13:35:10.978  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 (replication=false)
+2018-05-24 13:35:11.447  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 with status DOWN (replication=true)
+2018-05-24 13:35:11.448  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8181 (replication=true)
+2018-05-24 13:35:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:35:23.485  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 with status UP (replication=false)
+2018-05-24 13:35:23.994  INFO 31045 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 with status UP (replication=true)
+2018-05-24 13:35:24.574  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 with status DOWN (replication=false)
+2018-05-24 13:35:24.614  INFO 31045 --- [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 (replication=false)
+2018-05-24 13:35:25.083  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 with status DOWN (replication=true)
+2018-05-24 13:35:25.083  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance BACKLOG-SERVER/10.1.10.151:backlog-server:8181 (replication=true)
+2018-05-24 13:35:33.855  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 with status UP (replication=false)
+2018-05-24 13:35:34.365  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 with status UP (replication=true)
+2018-05-24 13:35:35.012  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 with status DOWN (replication=false)
+2018-05-24 13:35:35.044  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 (replication=false)
+2018-05-24 13:35:35.519  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 with status DOWN (replication=true)
+2018-05-24 13:35:35.519  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8181 (replication=true)
+2018-05-24 13:35:44.918  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 with status UP (replication=false)
+2018-05-24 13:35:45.428  INFO 31045 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 with status UP (replication=true)
+2018-05-24 13:35:45.678  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 with status DOWN (replication=false)
+2018-05-24 13:35:45.704  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 (replication=false)
+2018-05-24 13:35:46.185  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 with status DOWN (replication=true)
+2018-05-24 13:35:46.185  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8181 (replication=true)
+2018-05-24 13:36:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:37:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:37:25.001  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=false)
+2018-05-24 13:37:25.508  INFO 31045 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status UP (replication=true)
+2018-05-24 13:37:28.588  INFO 31045 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status UP (replication=false)
+2018-05-24 13:37:29.098  INFO 31045 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance TIMESHEETS-SERVER/10.1.10.151:timesheets-server:8084 with status UP (replication=true)
+2018-05-24 13:37:30.117  INFO 31045 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status UP (replication=false)
+2018-05-24 13:37:30.625  INFO 31045 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance BACKLOG-SERVER/10.1.10.151:backlog-server:8082 with status UP (replication=true)
+2018-05-24 13:37:30.803  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=false)
+2018-05-24 13:37:31.310  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ALLOCATIONS-SERVER/10.1.10.151:allocations-server:8081 with status UP (replication=true)
+2018-05-24 13:38:18.897  INFO 31045 --- [nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=false)
+2018-05-24 13:38:18.945  INFO 31045 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=false)
+2018-05-24 13:38:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2018-05-24 13:38:19.411  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 with status DOWN (replication=true)
+2018-05-24 13:38:19.412  INFO 31045 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance REGISTRATION-SERVER/10.1.10.151:registration-server:8083 (replication=true)
+2018-05-24 13:39:19.409  INFO 31045 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
