@@ -76,8 +76,8 @@ public class FlowTest {
     public void testBasicFlow() throws Exception {
         HttpClient.Response response;
 
-        response = httpClient.get(registrationServerUrl("/"));
-        assertThat(response.body).isEqualTo("Noop!");
+        /*response = httpClient.get(registrationServerUrl("/"));
+        assertThat(response.body).isEqualTo("Noop!");*/
 
         response = httpClient.post(registrationServerUrl("/registration"), jsonMapBuilder()
             .put("name", "aUser")
